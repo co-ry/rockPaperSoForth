@@ -1,15 +1,12 @@
-// computerSelection = "paper" 
-
-playerSelection = "paper";
+playerSelection = "rock";
 
 const myArray = ["rock", "paper", "scissors"];
 
-function computerSelection() {
-    return myArray[Math.floor(Math.random() * myArray.length)];
+function computerRandom() {
+    computerSelection = myArray[Math.floor(Math.random() * myArray.length)];
+    return computerSelection
 }
-console.log(computerSelection)
-
-function playRound(computerSelection, playerSelection) {
+function playRound(playerSelection, computerSelection) {
     if (computerSelection == playerSelection) {
         return("tie game ")
     }else if (
@@ -23,6 +20,7 @@ function playRound(computerSelection, playerSelection) {
         return("winner")
     }
 }
-console.log(playerSelection())
+console.log(computerRandom())
+console.log(playerSelection)
 
 console.log(playRound(computerSelection, playerSelection));
