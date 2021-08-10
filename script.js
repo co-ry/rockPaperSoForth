@@ -1,47 +1,27 @@
-computerSelection = "rock" 
+playerSelection = "rock";
+let computerSelection
+const myArray = ["rock", "paper", "scissors"];
 
-playerSelection = "paper"
-
+function computerRandom() {
+    computerSelection = myArray[Math.floor(Math.random() * myArray.length)];
+    return computerSelection
+}
 function playRound(computerSelection, playerSelection) {
     if (computerSelection == playerSelection) {
         return("tie game ")
-    }else {
-        return("winner")
-    }
-}
-console.log(playRound(computerSelection, playerSelection));
-
-
-
-
-const myArray = ["rock", "paper", "scissors"];
-
-function computerSelection() {
-    return myArray[Math.floor(Math.random() * myArray.length)];
-}
-function playerSelection() = "scissors"
-
-console.log(playerSelection())
-console.log(computerSelection())
-
-
-function playRound(playerSelection, computerSelection) {
-    // computerSelection = computerPlay().toLowerCase();
-    // playerSelection = playerSelection.toLowerCase();
-    if (computerSelection == playerSelection) {
-    return("Tie game!");
-    } 
+            }
     else if (
-    (computerSelection == "rock" && playerSelection == "scissors") ||
-    (computerSelection == "scissors" && playerSelection == "paper") ||
-    (computerSelection == "paper" && playerSelection == "rock")
-    ) {
-    return("You lose")
-    }
+            (computerSelection == "rock" && playerSelection == "scissors") ||
+            (computerSelection == "scissors" && playerSelection == "paper") ||
+            (computerSelection == "paper" && playerSelection == "rock")
+            ) {
+            return("You lose")
+            }
     else {
-    return("Winner")
-    }
+        return("winner")
+            }
 }
+console.log(computerRandom())
+console.log(playerSelection)
 
-console.log(playRound(playerSelection, computerSelection));
-
+console.log(playRound(computerSelection, playerSelection));
