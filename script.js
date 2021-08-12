@@ -28,15 +28,14 @@ function playRound(computerSelection, playerSelection) {
             }
 }
 
-for(i=0; i<5; i++) {
+while (computerScore < 5 && playerScore < 5) {
     playerInput = prompt("Rock, paper or scissors")
-    let playerSelection = playerInput.toLowerCase()
+    playerSelection = playerInput.toLowerCase()
     console.log(computerRandom());
     console.log(playerSelection);
     console.log(playRound(computerSelection, playerSelection));
-    
+    console.log("total score>>>> computer: " + computerScore + " player: " + playerScore)
 }
-console.log("total score>>>> computer: " + computerScore + " player: " + playerScore)
 
 if (playerScore > computerScore){
     console.log("You are the grand champion")
