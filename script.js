@@ -1,5 +1,5 @@
 let playerInput;
-let playerSelection = playerInput;
+let playerSelection;
 let computerSelection;
 let playerScore = 0
 let computerScore = 0
@@ -29,7 +29,8 @@ function playRound(computerSelection, playerSelection) {
 }
 
 for(i=0; i<5; i++) {
-    let playerInput = prompt("Rock, paper or scissors")
+    playerInput = prompt("Rock, paper or scissors")
+    let playerSelection = playerInput.toLowerCase()
     console.log(computerRandom());
     console.log(playerSelection);
     console.log(playRound(computerSelection, playerSelection));
@@ -40,7 +41,7 @@ console.log("total score>>>> computer: " + computerScore + " player: " + playerS
 if (playerScore > computerScore){
     console.log("You are the grand champion")
 }
-else if(playerScore = computerScore){
+else if(playerScore == computerScore){
     console.log("Too close to call. Play again")
 }
 else {
