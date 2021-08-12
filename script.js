@@ -10,6 +10,15 @@ function computerRandom() {
     return computerSelection
 }
 
+function playerChoice(){
+    playerInput = prompt("Rock, paper or scissors");
+    playerSelection = playerInput.toLowerCase();
+    if (playerSelection != "rock" || "paper" || "scissors" ){
+        alert("Rock, Paper, or Scissors ONLY! Try again.");
+    }
+    return playerSelection
+}
+
 function playRound(computerSelection, playerSelection) {
     if (computerSelection == playerSelection) {
         return("tie game ")
@@ -29,10 +38,8 @@ function playRound(computerSelection, playerSelection) {
 }
 
 while (computerScore < 5 && playerScore < 5) {
-    playerInput = prompt("Rock, paper or scissors")
-    playerSelection = playerInput.toLowerCase()
     console.log(computerRandom());
-    console.log(playerSelection);
+    console.log(playerChoice());
     console.log(playRound(computerSelection, playerSelection));
     console.log("total score>>>> computer: " + computerScore + " player: " + playerScore)
 }
