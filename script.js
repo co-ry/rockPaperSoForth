@@ -13,13 +13,19 @@ function computerRandom() {
 function playerChoice(){
     playerInput = prompt("Rock, paper or scissors");
     playerSelection = playerInput.toLowerCase();
-    if (playerSelection != "rock" || "paper" || "scissors" ){
+    if (playerSelection === "rock" || "paper" || "scissors" ){
+        return playerSelection
+    }
+    else {
         alert("Rock, Paper, or Scissors ONLY! Try again.");
     }
-    return playerSelection
 }
 
 function playRound(computerSelection, playerSelection) {
+    // if (playerSelection != "rock" || "paper" || "scissors" ){
+    //         alert("Rock, Paper, or Scissors ONLY! Try again.");
+    //         return
+    //     }
     if (computerSelection == playerSelection) {
         return("tie game ")
             }
@@ -31,15 +37,23 @@ function playRound(computerSelection, playerSelection) {
             computerScore++    
             return("You lose")
             }
+    else if (
+            (computerSelection == "scissors" && playerSelection == "rock") ||
+            (computerSelection == "paper" && playerSelection == "scissors") ||
+            (computerSelection == "rock" && playerSelection == "paper")
+            ) {
+            playerScore++    
+            return("You Win")
+            }
     else {
-        playerScore++
-        return("winner")
+        return("Nothing there, Chief! What did you enter???")
             }
 }
 
-while (computerScore < 5 && playerScore < 5) {
+while (computerScore < 3 && playerScore < 3) {
     console.log(computerRandom());
     console.log(playerChoice());
+    // console.log(playerSelection)
     console.log(playRound(computerSelection, playerSelection));
     console.log("total score>>>> computer: " + computerScore + " player: " + playerScore)
 }
