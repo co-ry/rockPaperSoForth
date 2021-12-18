@@ -1,0 +1,9 @@
+.instructions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#rock {
+    background-color: aquamarine;
+}

@@ -7,23 +7,35 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
-        
     </head>
     <body>
-       <Div class= "instructions">
+       <Div>
            <header>
                <nav>
                    <p>Console still to play</p>
                </nav>
            </header>
            <main>
-            <script src="script.js"></script>
+               <div id="game-container">
+                   <div id="btn-container">
+                        <div>
+                            <button id="rock" class="btns">Rock</button>
+                        </div>
+                        <div>
+                            <button id="paper" class="btns">Paper</button>
+                        </div>
+                        <div>
+                            <button id="scissors" class="btns">Scissors</button>
+                        </div>
+                    </div>
+                    <div id="score-container">
+                        <p id="player-score">0</p>
+                        <p id="computer-score">0</p>
+                    </div>
+               </div>
            </main>
-
         <p>Game In Progress!!!</p>
        </Div>
-       
-
-        
+       <script src="script.js"></script>
     </body>
 </html>
